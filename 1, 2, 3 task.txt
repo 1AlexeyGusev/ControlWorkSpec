@@ -1,0 +1,624 @@
+gas@gas-VirtualBox:~$ sudo apt update
+[sudo] password for gas:
+Hit:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Fetched 129 kB in 1s (97,6 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+222 packages can be upgraded. Run 'apt list --upgradable' to see them.
+gas@gas-VirtualBox:~$ cat > Pets
+Dogs
+Cats
+Humsters
+gas@gas-VirtualBox:~$ cat > Pack_animals
+Horses
+Camels
+Donkeys
+gas@gas-VirtualBox:~$ cat Pets Pack_animals > Union_animals
+gas@gas-VirtualBox:~$ mv Union_animals Human_friends
+gas@gas-VirtualBox:~$ ls
+Desktop    Downloads      Music         Pets      Public  Templates
+Documents  Human_friends  Pack_animals  Pictures  snap    Videos
+gas@gas-VirtualBox:~$ mkdir NewDir
+gas@gas-VirtualBox:~$ mv Human_friends NewDir/
+gas@gas-VirtualBox:~$ sudo apt install mysql-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libaio1 libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7
+  libevent-pthreads-2.1-7 libfcgi-bin libfcgi-perl libfcgi0ldbl
+  libhtml-template-perl libmecab2 libprotobuf-lite23 mecab-ipadic
+  mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0
+  mysql-common mysql-server-8.0 mysql-server-core-8.0
+Suggested packages:
+  libipc-sharedcache-perl mailx tinyca
+The following NEW packages will be installed:
+  libaio1 libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7
+  libevent-pthreads-2.1-7 libfcgi-bin libfcgi-perl libfcgi0ldbl
+gas@gas-VirtualBox:~$ sudo apt update
+[sudo] password for gas: 
+1Sorry, try again.
+[sudo] password for gas: 
+Hit:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Get:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:4 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Fetched 128 kB in 1s (137 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+70 packages can be upgraded. Run 'apt list --upgradable' to see them.
+gas@gas-VirtualBox:~$ sudo apt install mysql-client
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  mysql-client
+0 upgraded, 1 newly installed, 0 to remove and 70 not upgraded.
+Need to get 9 356 B of archives.
+After this operation, 35,8 kB of additional disk space will be used.
+Get:1 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 mysql-client all 8.0.39-0ubuntu0.22.04.1 [9 356 B]
+Fetched 9 356 B in 0s (22,1 kB/s)            
+Selecting previously unselected package mysql-client.
+(Reading database ... 179799 files and directories currently installed.)
+Preparing to unpack .../mysql-client_8.0.39-0ubuntu0.22.04.1_all.deb ...
+Unpacking mysql-client (8.0.39-0ubuntu0.22.04.1) ...
+Setting up mysql-client (8.0.39-0ubuntu0.22.04.1) ...
+gas@gas-VirtualBox:~$ sudo apt-add-repository 'deb https://repo.mysql.com/apt/ubuntu/dists/jammy/mysql-apt-config/'
+Unable to handle repository shortcut 'deb https://repo.mysql.com/apt/ubuntu/dists/jammy/mysql-apt-config/'
+gas@gas-VirtualBox:~$ dpkg -l
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name                                       Version                         >
++++-==========================================-================================>
+ii  accountsservice                            22.07.5-2ubuntu1.5              >
+ii  acl                                        2.3.1-1                         >
+ii  acpi-support                               0.144                           >
+ii  acpid                                      1:2.0.33-1ubuntu1               >
+ii  adduser                                    3.118ubuntu5                    >
+ii  adwaita-icon-theme                         41.0-1ubuntu1                   >
+ii  alsa-base                                  1.0.25+dfsg-0ubuntu7            >
+ii  alsa-topology-conf                         1.2.5.1-2                       >
+ii  alsa-ucm-conf                              1.2.6.3-1ubuntu1.10             >
+ii  alsa-utils                                 1.2.6-1ubuntu1                  >
+ii  amd64-microcode                            3.20191218.1ubuntu2.2           >
+ii  anacron                                    2.3-31ubuntu2                   >
+ii  apg                                        2.2.3.dfsg.1-5build2            >
+ii  apparmor                                   3.0.4-2ubuntu2.3build2          >
+ii  apport                                     2.20.11-0ubuntu82.5             >
+ii  apport-gtk                                 2.20.11-0ubuntu82.5             >
+ii  apport-symptoms                            0.24                            >
+ii  appstream                                  0.15.2-2                        >
+ii  apt                                        2.4.11                          >
+ii  apt-config-icons                           0.15.2-2                        >
+ii  apt-config-icons-hidpi                     0.15.2-2                        >
+ii  apt-utils                                  2.4.11                          >
+ii  aptdaemon                                  1.1.1+bzr982-0ubuntu39          >
+ii  aptdaemon-data                             1.1.1+bzr982-0ubuntu39          >
+ii  apturl                                     0.5.2ubuntu22                   >
+ii  apturl-common                              0.5.2ubuntu22                   >
+ii  aspell                                     0.60.8-4build1                  >
+ii  aspell-en                                  2018.04.16-0-1                  >
+ii  at-spi2-core                               2.44.0-3                        >
+ii  avahi-autoipd                              0.8-5ubuntu5.2                  >
+ii  avahi-daemon                               0.8-5ubuntu5.2                  >
+ii  avahi-utils                                0.8-5ubuntu5.2                  >
+ii  base-files                                 12ubuntu4.6                     >
+ii  base-passwd                                3.5.52build1                    >
+ii  bash                                       5.1-6ubuntu1.1                  >
+ii  bash-completion                            1:2.11-5ubuntu1                 >
+ii  bc                                         1.07.1-3build1                  >
+ii  bind9-dnsutils                             1:9.18.28-0ubuntu0.22.04.1      >
+ii  bind9-host                                 1:9.18.28-0ubuntu0.22.04.1      >
+ii  bind9-libs:amd64                           1:9.18.28-0ubuntu0.22.04.1      >
+ii  bluez                                      5.64-0ubuntu1.3                 >
+ii  bluez-cups                                 5.64-0ubuntu1.3                 >
+ii  bluez-obexd                                5.64-0ubuntu1.3                 >
+ii  bolt                                       0.9.2-1                         >
+ii  brltty                                     6.4-4ubuntu3                    >
+ii  bsdextrautils                              2.37.2-4ubuntu3.4               >
+ii  bsdutils                                   1:2.37.2-4ubuntu3.4             >
+ii  bubblewrap                                 0.6.1-1                         >
+ii  busybox-initramfs                          1:1.30.1-7ubuntu3.1             >
+ii  busybox-static                             1:1.30.1-7ubuntu3.1             >
+ii  bzip2                                      1.0.8-5build1                   >
+ii  ca-certificates                            20230311ubuntu0.22.04.1         >
+ii  cheese-common                              41.1-1build1                    >
+ii  colord                                     1.4.6-1                         >
+ii  colord-data                                1.4.6-1                         >
+ii  command-not-found                          22.04.0                         >
+ii  console-setup                              1.205ubuntu3                    >
+ii  console-setup-linux                        1.205ubuntu3                    >
+ii  coreutils                                  8.32-4.1ubuntu1.1               >
+ii  cpio                                       2.13+dfsg-7ubuntu0.1            >
+ii  cpp                                        4:11.2.0-1ubuntu1               >
+ii  cpp-11                                     11.4.0-1ubuntu1~22.04           >
+ii  cracklib-runtime                           2.9.6-3.4build4                 >
+ii  cron                                       3.0pl1-137ubuntu3               >
+ii  cups                                       2.4.1op1-1ubuntu4.10            >
+ii  cups-browsed                               1.28.15-0ubuntu1.2              >
+ii  cups-bsd                                   2.4.1op1-1ubuntu4.10            >
+ii  cups-client                                2.4.1op1-1ubuntu4.10            >
+ii  cups-common                                2.4.1op1-1ubuntu4.10            >
+ii  cups-core-drivers                          2.4.1op1-1ubuntu4.10            >
+ii  cups-daemon                                2.4.1op1-1ubuntu4.10            >
+ii  cups-filters                               1.28.15-0ubuntu1.2              >
+ii  cups-filters-core-drivers                  1.28.15-0ubuntu1.2              >
+ii  cups-ipp-utils                             2.4.1op1-1ubuntu4.10            >
+ii  cups-pk-helper                             0.2.6-1ubuntu5                  >
+ii  cups-ppdc                                  2.4.1op1-1ubuntu4.10            >
+ii  cups-server-common                         2.4.1op1-1ubuntu4.10            >
+ii  dash                                       0.5.11+git20210903+057cd650a4ed->
+ii  dbus                                       1.12.20-2ubuntu4.1              >
+ii  dbus-user-session                          1.12.20-2ubuntu4.1              >
+ii  dc                                         1.07.1-3build1                  >
+ii  dconf-cli                                  0.40.0-3                        >
+ii  dconf-gsettings-backend:amd64              0.40.0-3                        >
+ii  dconf-service                              0.40.0-3                        >
+ii  debconf                                    1.5.79ubuntu1                   >
+ii  debconf-i18n                               1.5.79ubuntu1                   >
+ii  debianutils                                5.5-1ubuntu2                    >
+ii  desktop-file-utils                         0.26-1ubuntu3                   >
+ii  dictionaries-common                        1.28.14                         >
+ii  diffutils                                  1:3.8-0ubuntu2                  >
+ii  dirmngr                                    2.2.27-3ubuntu2.1               >
+ii  distro-info                                1.1ubuntu0.2                    >
+ii  distro-info-data                           0.52ubuntu0.7                   >
+ii  dmidecode                                  3.3-3ubuntu0.1                  >
+ii  dmsetup                                    2:1.02.175-2.1ubuntu4           >
+ii  dmz-cursor-theme                           0.4.5ubuntu1                    >
+ii  dns-root-data                              2023112702~ubuntu0.22.04.1      >
+ii  dnsmasq-base                               2.90-0ubuntu0.22.04.1           >
+ii  docbook-xml                                4.5-11                          >
+ii  dosfstools                                 4.2-1build3                     >
+ii  dpkg                                       1.21.1ubuntu2.2                 >
+ii  e2fsprogs                                  1.46.5-2ubuntu1.2               >
+ii  ed                                         1.18-1                          >
+ii  efibootmgr                                 17-1ubuntu2                     >
+ii  eject                                      2.37.2-4ubuntu3.4               >
+ii  emacsen-common                             3.0.4                           >
+ii  enchant-2                                  2.3.2-1ubuntu2                  >
+ii  eog                                        42.0-1                          >
+ii  espeak-ng-data:amd64                       1.50+dfsg-10ubuntu0.1           >
+ii  ethtool                                    1:5.16-1ubuntu0.1               >
+ii  evince                                     42.3-0ubuntu3.1                 >
+ii  evince-common                              42.3-0ubuntu3.1                 >
+ii  evolution-data-server                      3.44.4-0ubuntu1.1               >
+ii  evolution-data-server-common               3.44.4-0ubuntu1.1               >
+ii  fdisk                                      2.37.2-4ubuntu3.4               >
+ii  file                                       1:5.41-3ubuntu0.1               >
+ii  file-roller                                3.42.0-1                        >
+ii  findutils                                  4.8.0-1ubuntu3                  >
+ii  firefox                                    1:1snap1-0ubuntu2               >
+ii  firmware-sof-signed                        2.0-1ubuntu4.4                  >
+ii  fontconfig                                 2.13.1-4.2ubuntu5               >
+ii  fontconfig-config                          2.13.1-4.2ubuntu5               >
+ii  fonts-beng                                 2:1.3                           >
+ii  fonts-beng-extra                           3.2.1-1                         >
+ii  fonts-dejavu-core                          2.37-2build1                    >
+ii  fonts-deva                                 2:1.3                           >
+ii  fonts-deva-extra                           3.0-5                           >
+ii  fonts-droid-fallback                       1:6.0.1r16-1.1build1            >
+ii  fonts-freefont-ttf                         20120503-10build1               >
+ii  fonts-gargi                                2.0-5                           >
+ii  fonts-gubbi                                1.3-5build1                     >
+ii  fonts-gujr                                 2:1.4                           >
+ii  fonts-gujr-extra                           1.0.1-1                         >
+ii  fonts-guru                                 2:1.3                           >
+ii  fonts-guru-extra                           2.0-5                           >
+ii  fonts-indic                                2:1.4                           >
+ii  fonts-kacst                                2.01+mry-15                     >
+ii  fonts-kacst-one                            5.0+svn11846-10                 >
+ii  fonts-kalapi                               1.0-4                           >
+ii  fonts-khmeros-core                         5.0-9ubuntu1                    >
+ii  fonts-knda                                 2:1.3                           >
+ii  fonts-lao                                  0.0.20060226-10ubuntu2          >
+ii  fonts-liberation                           1:1.07.4-11                     >
+ii  fonts-liberation2                          2.1.5-1                         >
+ii  fonts-lklug-sinhala                        0.6-4                           >
+ii  fonts-lohit-beng-assamese                  2.91.5-2                        >
+ii  fonts-lohit-beng-bengali                   2.91.5-2                        >
+ii  fonts-lohit-deva                           2.95.4-4                        >
+ii  fonts-lohit-gujr                           2.92.4-4                        >
+ii  fonts-lohit-guru                           2.91.2-2build1                  >
+ii  fonts-lohit-knda                           2.5.4-3                         >
+ii  fonts-lohit-mlym                           2.92.2-2                        >
+ii  fonts-lohit-orya                           2.91.2-2                        >
+ii  fonts-lohit-taml                           2.91.3-2                        >
+ii  fonts-lohit-taml-classical                 2.5.4-2                         >
+ii  fonts-lohit-telu                           2.5.5-2build1                   >
+ii  fonts-mlym                                 2:1.3                           >
+ii  fonts-nakula                               1.0-4                           >
+ii  fonts-navilu                               1.2-3                           >
+ii  fonts-noto-cjk                             1:20220127+repack1-1            >
+ii  fonts-noto-color-emoji                     2.042-0ubuntu0.22.04.1          >
+ii  fonts-noto-mono                            20201225-1build1                >
+ii  fonts-opensymbol                           2:102.12+LibO7.3.7-0ubuntu0.22.0>
+ii  fonts-orya                                 2:1.3                           >
+ii  fonts-orya-extra                           2.0-6                           >
+ii  fonts-pagul                                1.0-8                           >
+ii  fonts-sahadeva                             1.0-5                           >
+ii  fonts-samyak-deva                          1.2.2-5build1                   >
+ii  fonts-samyak-gujr                          1.2.2-5build1                   >
+ii  fonts-samyak-mlym                          1.2.2-5build1                   >
+ii  fonts-samyak-taml                          1.2.2-5build1                   >
+ii  fonts-sarai                                1.0-3                           >
+ii  fonts-sil-abyssinica                       2.100-3                         >
+ii  fonts-sil-padauk                           5.000-3                         >
+ii  fonts-smc                                  1:7.2                           >
+ii  fonts-smc-anjalioldlipi                    7.1.2-2                         >
+ii  fonts-smc-chilanka                         1.540-1                         >
+ii  fonts-smc-dyuthi                           3.0.2-2                         >
+ii  fonts-smc-gayathri                         1.110-2-1                       >
+ii  fonts-smc-karumbi                          1.1.2-2                         >
+ii  fonts-smc-keraleeyam                       3.0.2-2                         >
+ii  fonts-smc-manjari                          2.000-3                         >
+ii  fonts-smc-meera                            7.0.3-1                         >
+ii  fonts-smc-rachana                          7.0.2-1build1                   >
+ii  fonts-smc-raghumalayalamsans               2.2.1-1                         >
+ii  fonts-smc-suruma                           3.2.3-1                         >
+ii  fonts-smc-uroob                            2.0.2-1                         >
+ii  fonts-taml                                 2:1.4                           >
+ii  fonts-telu                                 2:1.3                           >
+ii  fonts-telu-extra                           2.0-5                           >
+ii  fonts-teluguvijayam                        2.1-1                           >
+ii  fonts-thai-tlwg                            1:0.7.3-1                       >
+ii  fonts-tibetan-machine                      1.901b-6                        >
+ii  fonts-tlwg-garuda                          1:0.7.3-1                       >
+ii  fonts-tlwg-garuda-ttf                      1:0.7.3-1                       >
+ii  fonts-tlwg-kinnari                         1:0.7.3-1                       >
+ii  fonts-tlwg-kinnari-ttf                     1:0.7.3-1                       >
+ii  fonts-tlwg-laksaman                        1:0.7.3-1                       >
+ii  fonts-tlwg-laksaman-ttf                    1:0.7.3-1                       >
+ii  fonts-tlwg-loma                            1:0.7.3-1                       >
+ii  fonts-tlwg-loma-ttf                        1:0.7.3-1                       >
+ii  fonts-tlwg-mono                            1:0.7.3-1                       >
+ii  fonts-tlwg-mono-ttf                        1:0.7.3-1                       >
+ii  fonts-tlwg-norasi                          1:0.7.3-1                       >
+ii  fonts-tlwg-norasi-ttf                      1:0.7.3-1                       >
+ii  fonts-tlwg-purisa                          1:0.7.3-1                       >
+ii  fonts-tlwg-purisa-ttf                      1:0.7.3-1                       >
+ii  fonts-tlwg-sawasdee                        1:0.7.3-1                       >
+ii  fonts-tlwg-sawasdee-ttf                    1:0.7.3-1                       >
+ii  fonts-tlwg-typewriter                      1:0.7.3-1                       >
+ii  fonts-tlwg-typewriter-ttf                  1:0.7.3-1                       >
+ii  fonts-tlwg-typist                          1:0.7.3-1                       >
+ii  fonts-tlwg-typist-ttf                      1:0.7.3-1                       >
+ii  fonts-tlwg-typo                            1:0.7.3-1                       >
+ii  fonts-tlwg-typo-ttf                        1:0.7.3-1                       >
+ii  fonts-tlwg-umpush                          1:0.7.3-1                       >
+ii  fonts-tlwg-umpush-ttf                      1:0.7.3-1                       >
+ii  fonts-tlwg-waree                           1:0.7.3-1                       >
+ii  fonts-tlwg-waree-ttf                       1:0.7.3-1                       >
+ii  fonts-ubuntu                               0.83-6ubuntu1                   >
+ii  fonts-urw-base35                           20200910-1                      >
+ii  fonts-yrsa-rasa                            2.005-1                         >
+ii  foomatic-db-compressed-ppds                20220223-0ubuntu1               >
+ii  fprintd                                    1.94.2-1ubuntu0.22.04.1         >
+ii  friendly-recovery                          0.2.42                          >
+ii  ftp                                        20210827-4build1                >
+ii  fuse3                                      3.10.5-1build1                  >
+ii  fwupd                                      1.7.9-1~22.04.3                 >
+ii  fwupd-signed                               1.51.1~22.04.1+1.4-0ubuntu0.1   >
+ii  gamemode                                   1.6.1-1build2                   >
+ii  gamemode-daemon                            1.6.1-1build2                   >
+ii  gcc-11-base:amd64                          11.4.0-1ubuntu1~22.04           >
+ii  gcc-12-base:amd64                          12.3.0-1ubuntu1~22.04           >
+ii  gcr                                        3.40.0-4                        >
+ii  gdb                                        12.1-0ubuntu1~22.04.2           >
+ii  gdisk                                      1.0.8-4build1                   >
+ii  gdm3                                       42.0-1ubuntu7.22.04.4           >
+ii  gedit                                      41.0-3                          >
+ii  gedit-common                               41.0-3                          >
+ii  geoclue-2.0                                2.5.7-3ubuntu3                  >
+ii  gettext-base                               0.21-4ubuntu4                   >
+ii  ghostscript                                9.55.0~dfsg1-0ubuntu5.9         >
+ii  ghostscript-x                              9.55.0~dfsg1-0ubuntu5.9         >
+ii  gir1.2-accountsservice-1.0:amd64           22.07.5-2ubuntu1.5              >
+ii  gir1.2-adw-1:amd64                         1.1.7-0ubuntu0.22.04.1          >
+ii  gir1.2-atk-1.0:amd64                       2.36.0-3build1                  >
+ii  gir1.2-atspi-2.0:amd64                     2.44.0-3                        >
+ii  gir1.2-dbusmenu-glib-0.4:amd64             16.04.1+18.10.20180917-0ubuntu8 >
+ii  gir1.2-dee-1.0                             1.2.7+17.10.20170616-6ubuntu4   >
+ii  gir1.2-freedesktop:amd64                   1.72.0-1                        >
+ii  gir1.2-gck-1:amd64                         3.40.0-4                        >
+ii  gir1.2-gcr-3:amd64                         3.40.0-4                        >
+ii  gir1.2-gdesktopenums-3.0:amd64             42.0-1ubuntu1                   >
+ii  gir1.2-gdkpixbuf-2.0:amd64                 2.42.8+dfsg-1ubuntu0.3          >
+ii  gir1.2-gdm-1.0:amd64                       42.0-1ubuntu7.22.04.4           >
+ii  gir1.2-geoclue-2.0:amd64                   2.5.7-3ubuntu3                  >
+ii  gir1.2-glib-2.0:amd64                      1.72.0-1                        >
+ii  gir1.2-gmenu-3.0:amd64                     3.36.0-1ubuntu3                 >
+ii  gir1.2-gnomebluetooth-3.0:amd64            42.0-5                          >
+ii  gir1.2-gnomedesktop-3.0:amd64              42.9-0ubuntu1                   >
+ii  gir1.2-goa-1.0:amd64                       3.44.0-1ubuntu1                 >
+ii  gir1.2-graphene-1.0:amd64                  1.10.8-1                        >
+ii  gir1.2-gstreamer-1.0:amd64                 1.20.3-0ubuntu1                 >
+ii  gir1.2-gtk-3.0:amd64                       3.24.33-1ubuntu2.2              >
+ii  gir1.2-gtk-4.0:amd64                       4.6.9+ds-0ubuntu0.22.04.2       >
+ii  gir1.2-gtksource-4:amd64                   4.8.3-1                         >
+ii  gir1.2-gweather-3.0:amd64                  40.0-5build1                    >
+ii  gir1.2-handy-1:amd64                       1.6.1-1                         >
+ii  gir1.2-harfbuzz-0.0:amd64                  2.7.4-1ubuntu3.1                >
+ii  gir1.2-ibus-1.0:amd64                      1.5.26-4                        >
+ii  gir1.2-javascriptcoregtk-4.0:amd64         2.44.3-0ubuntu0.22.04.1         >
+ii  gir1.2-json-1.0:amd64                      1.6.6-1build1                   >
+ii  gir1.2-mutter-10:amd64                     42.9-0ubuntu7.1                 >
+ii  gir1.2-nm-1.0:amd64                        1.36.6-0ubuntu2                 >
+ii  gir1.2-nma-1.0:amd64                       1.8.34-1ubuntu1                 >
+ii  gir1.2-notify-0.7:amd64                    0.7.9-3ubuntu5.22.04.1          >
+ii  gir1.2-packagekitglib-1.0                  1.2.5-2ubuntu2                  >
+ii  gir1.2-pango-1.0:amd64                     1.50.6+ds-2ubuntu1              >
+ii  gir1.2-peas-1.0:amd64                      1.32.0-1                        >
+ii  gir1.2-polkit-1.0                          0.105-33                        >
+ii  gir1.2-rsvg-2.0:amd64                      2.52.5+dfsg-3ubuntu0.2          >
+ii  gir1.2-secret-1:amd64                      0.20.5-2                        >
+ii  gir1.2-snapd-1:amd64                       1.60-0ubuntu1                   >
+ii  gir1.2-soup-2.4:amd64                      2.74.2-3                        >
+ii  gir1.2-unity-7.0:amd64                     7.1.4+19.04.20190319-6build1    >
+ii  gir1.2-upowerglib-1.0:amd64                0.99.17-1                       >
+ii  gir1.2-vte-2.91:amd64                      0.68.0-1ubuntu0.1               >
+ii  gir1.2-webkit2-4.0:amd64                   2.44.3-0ubuntu0.22.04.1         >
+ii  gir1.2-wnck-3.0:amd64                      40.1-1                          >
+ii  gjs                                        1.72.2-0ubuntu2                 >
+ii  gkbd-capplet                               3.26.1-2                        >
+ii  glib-networking:amd64                      2.72.0-1                        >
+ii  glib-networking-common                     2.72.0-1                        >
+ii  glib-networking-services                   2.72.0-1                        >
+ii  gnome-accessibility-themes                 3.28-1ubuntu3                   >
+ii  gnome-bluetooth                            3.34.5-8                        >
+ii  gnome-bluetooth-3-common                   42.0-5                          >
+ii  gnome-bluetooth-common                     3.34.5-8                        >
+ii  gnome-calculator                           1:41.1-2ubuntu2                 >
+ii  gnome-characters                           41.0-4                          >
+ii  gnome-control-center                       1:41.7-0ubuntu0.22.04.8         >
+ii  gnome-control-center-data                  1:41.7-0ubuntu0.22.04.8         >
+ii  gnome-control-center-faces                 1:41.7-0ubuntu0.22.04.8         >
+ii  gnome-desktop3-data                        42.9-0ubuntu1                   >
+ii  gnome-disk-utility                         42.0-1ubuntu1                   >
+ii  gnome-font-viewer                          41.0-2                          >
+ii  gnome-initial-setup                        42.0.1-1ubuntu2.3               >
+ii  gnome-keyring                              40.0-3ubuntu3                   >
+ii  gnome-keyring-pkcs11:amd64                 40.0-3ubuntu3                   >
+ii  gnome-logs                                 42.0-1                          >
+ii  gnome-menus                                3.36.0-1ubuntu3                 >
+ii  gnome-online-accounts                      3.44.0-1ubuntu1                 >
+ii  gnome-power-manager                        3.32.0-2build2                  >
+ii  gnome-remote-desktop                       42.9-0ubuntu0.22.04.1           >
+ii  gnome-session-bin                          42.0-1ubuntu2                   >
+ii  gnome-session-canberra                     0.30-10ubuntu1.22.04.1          >
+ii  gnome-session-common                       42.0-1ubuntu2                   >
+ii  gnome-settings-daemon                      42.1-1ubuntu2.2                 >
+ii  gnome-settings-daemon-common               42.1-1ubuntu2.2                 >
+ii  gnome-shell                                42.9-0ubuntu2.2                 >
+ii  gnome-shell-common                         42.9-0ubuntu2.2                 >
+ii  gnome-shell-extension-appindicator         42-2~fakesync1                  >
+ii  gnome-shell-extension-desktop-icons-ng     43-2ubuntu1                     >
+ii  gnome-shell-extension-ubuntu-dock          72~ubuntu5.22.04.2.1            >
+ii  gnome-startup-applications                 42.0-1ubuntu2                   >
+ii  gnome-system-monitor                       42.0-1                          >
+ii  gnome-terminal                             3.44.0-1ubuntu1                 >
+ii  gnome-terminal-data                        3.44.0-1ubuntu1                 >
+ii  gnome-themes-extra:amd64                   3.28-1ubuntu3                   >
+ii  gnome-themes-extra-data                    3.28-1ubuntu3                   >
+ii  gnome-user-docs                            41.5-1ubuntu2                   >
+ii  gnupg                                      2.2.27-3ubuntu2.1               >
+ii  gnupg-l10n                                 2.2.27-3ubuntu2.1               >
+ii  gnupg-utils                                2.2.27-3ubuntu2.1               >
+ii  gpg                                        2.2.27-3ubuntu2.1               >
+ii  gpg-agent                                  2.2.27-3ubuntu2.1               >
+ii  gpg-wks-client                             2.2.27-3ubuntu2.1               >
+ii  gpg-wks-server                             2.2.27-3ubuntu2.1               >
+ii  gpgconf                                    2.2.27-3ubuntu2.1               >
+ii  gpgsm                                      2.2.27-3ubuntu2.1               >
+ii  gpgv                                       2.2.27-3ubuntu2.1               >
+ii  grep                                       3.7-1build1                     >
+ii  groff-base                                 1.22.4-8build1                  >
+ii  grub-common                                2.06-2ubuntu7.2                 >
+ii  grub-efi-amd64-bin                         2.06-2ubuntu14.4                >
+ii  grub-efi-amd64-signed                      1.187.6+2.06-2ubuntu14.4        >
+ii  grub-gfxpayload-lists                      0.7                             >
+ii  grub-pc                                    2.06-2ubuntu7.2                 >
+ii  grub-pc-bin                                2.06-2ubuntu7.2                 >
+ii  grub2-common                               2.06-2ubuntu7.2                 >
+ii  gsettings-desktop-schemas                  42.0-1ubuntu1                   >
+ii  gsettings-ubuntu-schemas                   0.0.7+21.10.20210712-0ubuntu2   >
+ii  gstreamer1.0-alsa:amd64                    1.20.1-1ubuntu0.2               >
+ii  gstreamer1.0-clutter-3.0:amd64             3.0.27-2ubuntu1                 >
+ii  gstreamer1.0-gl:amd64                      1.20.1-1ubuntu0.2               >
+ii  gstreamer1.0-packagekit                    1.2.5-2ubuntu2                  >
+ii  gstreamer1.0-pipewire:amd64                0.3.48-1ubuntu3                 >
+ii  gstreamer1.0-plugins-base:amd64            1.20.1-1ubuntu0.2               >
+ii  gstreamer1.0-plugins-base-apps             1.20.1-1ubuntu0.2               >
+ii  gstreamer1.0-plugins-good:amd64            1.20.3-0ubuntu1.1               >
+ii  gstreamer1.0-pulseaudio:amd64              1.20.3-0ubuntu1.1               >
+ii  gstreamer1.0-tools                         1.20.3-0ubuntu1                 >
+ii  gstreamer1.0-x:amd64                       1.20.1-1ubuntu0.2               >
+ii  gtk-update-icon-cache                      3.24.33-1ubuntu2.2              >
+ii  gtk2-engines-murrine:amd64                 0.98.2-3build2                  >
+ii  gtk2-engines-pixbuf:amd64                  2.24.33-2ubuntu2.1              >
+ii  gvfs:amd64                                 1.48.2-0ubuntu1                 >
+ii  gvfs-backends                              1.48.2-0ubuntu1                 >
+ii  gvfs-common                                1.48.2-0ubuntu1                 >
+ii  gvfs-daemons                               1.48.2-0ubuntu1                 >
+ii  gvfs-fuse                                  1.48.2-0ubuntu1                 >
+ii  gvfs-libs:amd64                            1.48.2-0ubuntu1                 >
+ii  gzip                                       1.10-4ubuntu4.1                 >
+ii  hdparm                                     9.60+ds-1build3                 >
+ii  hicolor-icon-theme                         0.17-2                          >
+ii  hostname                                   3.23ubuntu2                     >
+ii  hplip                                      3.21.12+dfsg0-1                 >
+ii  hplip-data                                 3.21.12+dfsg0-1                 >
+ii  humanity-icon-theme                        0.6.16                          >
+ii  hunspell-en-us                             1:2020.12.07-2                  >
+ii  hwdata                                     0.357-1                         >
+ii  ibus                                       1.5.26-4                        >
+ii  ibus-data                                  1.5.26-4                        >
+ii  ibus-gtk:amd64                             1.5.26-4                        >
+ii  ibus-gtk3:amd64                            1.5.26-4                        >
+ii  ibus-gtk4:amd64                            1.5.26-4                        >
+ii  ibus-table                                 1.16.7-1                        >
+ii  iio-sensor-proxy                           3.3-0ubuntu6                    >
+ii  im-config                                  0.50-2ubuntu22.04.1             >
+ii  info                                       6.8-4build1                     >
+ii  init                                       1.62                            >
+ii  init-system-helpers                        1.62                            >
+ii  initramfs-tools                            0.140ubuntu13.4                 >
+ii  initramfs-tools-bin                        0.140ubuntu13.4                 >
+ii  initramfs-tools-core                       0.140ubuntu13.4                 >
+ii  inputattach                                1:1.7.1-1build2                 >
+ii  install-info                               6.8-4build1                     >
+ii  intel-microcode                            3.20240813.0ubuntu0.22.04.2     >
+ii  ipp-usb                                    0.9.20-1ubuntu0.22.04.1         >
+ii  iproute2                                   5.15.0-1ubuntu2                 >
+ii  iptables                                   1.8.7-1ubuntu5.2                >
+ii  iputils-ping                               3:20211215-1                    >
+ii  iputils-tracepath                          3:20211215-1                    >
+ii  irqbalance                                 1.8.0-1ubuntu0.2                >
+ii  isc-dhcp-client                            4.4.1-2.3ubuntu2.4              >
+ii  isc-dhcp-common                            4.4.1-2.3ubuntu2.4              >
+ii  iso-codes                                  4.9.0-1                         >
+ii  iucode-tool                                2.3.1-1build1                   >
+ii  kbd                                        2.3.0-3ubuntu4.22.04            >
+ii  kerneloops                                 0.12+git20140509-6ubuntu5       >
+ii  keyboard-configuration                     1.205ubuntu3                    >
+ii  klibc-utils                                2.0.10-4ubuntu0.1               >
+ii  kmod                                       29-1ubuntu1                     >
+ii  language-pack-en                           1:22.04+20240902                >
+ii  language-pack-en-base                      1:22.04+20240902                >
+ii  language-pack-gnome-en                     1:22.04+20240902                >
+ii  language-pack-gnome-en-base                1:22.04+20240902                >
+ii  language-selector-common                   0.219.1                         >
+ii  language-selector-gnome                    0.219.1                         >
+ii  laptop-detect                              0.16                            >
+ii  less                                       590-1ubuntu0.22.04.3            >
+ii  libaa1:amd64                               1.4p5-50build1                  >
+ii  libabsl20210324:amd64                      0~20210324.2-2                  >
+ii  libaccountsservice0:amd64                  22.07.5-2ubuntu1.5              >
+ii  libacl1:amd64                              2.3.1-1                         >
+ii  libadwaita-1-0:amd64                       1.1.7-0ubuntu0.22.04.1          >
+ii  libaio1:amd64                              0.3.112-13build1                >
+ii  libao-common                               1.2.2+20180113-1.1ubuntu3       >
+ii  libao4:amd64                               1.2.2+20180113-1.1ubuntu3       >
+ii  libapparmor1:amd64                         3.0.4-2ubuntu2.3build2          >
+ii  libappstream4:amd64                        0.15.2-2                        >
+ii  libapt-pkg6.0:amd64                        2.4.11                          >
+ii  libarchive13:amd64                         3.6.0-1ubuntu1.1                >
+ii  libargon2-1:amd64                          0~20171227-0.3                  >
+ii  libasound2:amd64                           1.2.6.1-1ubuntu1                >
+ii  libasound2-data                            1.2.6.1-1ubuntu1                >
+ii  libasound2-plugins:amd64                   1.2.6-1                         >
+ii  libaspell15:amd64                          0.60.8-4build1                  >
+ii  libassuan0:amd64                           2.5.5-1build1                   >
+ii  libasyncns0:amd64                          0.8-6build2                     >
+ii  libatasmart4:amd64                         0.19-5build2                    >
+ii  libatk-adaptor:amd64                       2.38.0-3                        >
+ii  libatk-bridge2.0-0:amd64                   2.38.0-3                        >
+ii  libatk1.0-0:amd64                          2.36.0-3build1                  >
+ii  libatk1.0-data                             2.36.0-3build1                  >
+ii  libatkmm-1.6-1v5:amd64                     2.28.2-1build1                  >
+ii  libatm1:amd64                              1:2.5.1-4build2                 >
+ii  libatomic1:amd64                           12.3.0-1ubuntu1~22.04           >
+ii  libatopology2:amd64                        1.2.6.1-1ubuntu1                >
+ii  libatspi2.0-0:amd64                        2.44.0-3                        >
+ii  libattr1:amd64                             1:2.5.1-1build1                 >
+ii  libaudit-common                            1:3.0.7-1build1                 >
+ii  libaudit1:amd64                            1:3.0.7-1build1                 >
+ii  libauthen-sasl-perl                        2.1600-1.1                      >
+ii  libavahi-client3:amd64                     0.8-5ubuntu5.2                  >
+ii  libavahi-common-data:amd64                 0.8-5ubuntu5.2                  >
+ii  libavahi-common3:amd64                     0.8-5ubuntu5.2                  >
+ii  libavahi-core7:amd64                       0.8-5ubuntu5.2                  >
+
+[1]+  Stopped                 dpkg -l
+gas@gas-VirtualBox:~$ wget https://downloads.mysql.com/archives/get/p/8/file/mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb
+--2024-09-25 10:05:25--  https://downloads.mysql.com/archives/get/p/8/file/mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb
+Resolving downloads.mysql.com (downloads.mysql.com)... 23.211.74.232, 2001:2030:21:19e::2e31, 2001:2030:21:1a9::2e31
+Connecting to downloads.mysql.com (downloads.mysql.com)|23.211.74.232|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://cdn.mysql.com/archives/mysql-workbench/mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb [following]
+--2024-09-25 10:05:26--  https://cdn.mysql.com/archives/mysql-workbench/mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb
+Resolving cdn.mysql.com (cdn.mysql.com)... 23.211.42.21, 2001:2030:21:18a::1d68, 2001:2030:21:199::1d68
+Connecting to cdn.mysql.com (cdn.mysql.com)|23.211.42.21|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 25705694 (25M) [application/x-debian-package]
+Saving to: ‘mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb’
+
+mysql-workbench-com 100%[===================>]  24,51M  4,94MB/s    in 5,8s    
+
+2024-09-25 10:05:32 (4,21 MB/s) - ‘mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb’ saved [25705694/25705694]
+
+gas@gas-VirtualBox:~$ ll
+total 25228
+drwxr-x--- 15 gas  gas      4096 сен 25 10:05 ./
+drwxr-xr-x  3 root root     4096 сен 24 22:36 ../
+-rw-------  1 gas  gas       218 сен 25 00:17 .bash_history
+-rw-r--r--  1 gas  gas       220 сен 24 22:36 .bash_logout
+-rw-r--r--  1 gas  gas      3771 сен 24 22:36 .bashrc
+drwx------ 11 gas  gas      4096 сен 24 22:52 .cache/
+drwx------ 11 gas  gas      4096 сен 25 00:18 .config/
+drwxr-xr-x  3 gas  gas      4096 сен 25 00:16 Desktop/
+drwxr-xr-x  2 gas  gas      4096 сен 24 22:46 Documents/
+drwxr-xr-x  2 gas  gas      4096 сен 24 22:46 Downloads/
+drwx------  3 gas  gas      4096 сен 24 22:46 .local/
+drwxr-xr-x  2 gas  gas      4096 сен 24 22:46 Music/
+-rw-rw-r--  1 gas  gas  25705694 дек 20  2023 mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb
+drwxrwxr-x  2 gas  gas      4096 сен 24 23:01 NewDir/
+-rw-rw-r--  1 gas  gas        22 сен 24 22:58 Pack_animals
+-rw-rw-r--  1 gas  gas        19 сен 24 22:58 Pets
+drwxr-xr-x  2 gas  gas      4096 сен 24 22:46 Pictures/
+-rw-r--r--  1 gas  gas       807 сен 24 22:36 .profile
+drwxr-xr-x  2 gas  gas      4096 сен 24 22:46 Public/
+drwx------  3 gas  gas      4096 сен 24 22:47 snap/
+-rw-r--r--  1 gas  gas         0 сен 24 22:56 .sudo_as_admin_successful
+drwxr-xr-x  2 gas  gas      4096 сен 24 22:46 Templates/
+-rw-r-----  1 gas  gas         5 сен 25 08:50 .vboxclient-clipboard-tty2-control.pid
+-rw-r-----  1 gas  gas         5 сен 25 08:50 .vboxclient-clipboard-tty2-service.pid
+-rw-r-----  1 gas  gas         5 сен 25 08:50 .vboxclient-draganddrop-tty2-control.pid
+-rw-r-----  1 gas  gas         5 сен 25 08:50 .vboxclient-draganddrop-tty2-service.pid
+-rw-r-----  1 gas  gas         5 сен 25 08:50 .vboxclient-hostversion-tty2-control.pid
+-rw-r-----  1 gas  gas         5 сен 25 08:50 .vboxclient-seamless-tty2-control.pid
+-rw-r-----  1 gas  gas         5 сен 25 08:50 .vboxclient-seamless-tty2-service.pid
+-rw-r-----  1 gas  gas         5 сен 25 08:50 .vboxclient-vmsvga-session-tty2-control.pid
+-rw-r-----  1 gas  gas         5 сен 25 08:50 .vboxclient-vmsvga-session-tty2-service.pid
+drwxr-xr-x  2 gas  gas      4096 сен 24 22:46 Videos/
+-rw-rw-r--  1 gas  gas       174 сен 25 10:05 .wget-hsts
+gas@gas-VirtualBox:~$ dpkg -i mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb 
+dpkg: error: requested operation requires superuser privilege
+gas@gas-VirtualBox:~$ sudo dpkg -i mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb 
+[sudo] password for gas: 
+Selecting previously unselected package mysql-workbench-community.
+(Reading database ... 179801 files and directories currently installed.)
+Preparing to unpack mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb ...
+Unpacking mysql-workbench-community (8.0.36-1ubuntu22.04) ...
+dpkg: dependency problems prevent configuration of mysql-workbench-community:
+ mysql-workbench-community depends on libmysqlclient21 (>= 8.0.11); however:
+  Package libmysqlclient21 is not installed.
+ mysql-workbench-community depends on libproj22 (>= 8.2.0); however:
+  Package libproj22 is not installed.
+ mysql-workbench-community depends on libzip4 (>= 0.10); however:
+  Package libzip4 is not installed.
+
+dpkg: error processing package mysql-workbench-community (--install):
+ dependency problems - leaving unconfigured
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for shared-mime-info (2.1-2) ...
+Errors were encountered while processing:
+ mysql-workbench-community
+gas@gas-VirtualBox:~$ sudo dpkg -r mysql-workbench-community 
+(Reading database ... 181086 files and directories currently installed.)
+Removing mysql-workbench-community (8.0.36-1ubuntu22.04) ...
+Processing triggers for shared-mime-info (2.1-2) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+gas@gas-VirtualBox:~$ 
